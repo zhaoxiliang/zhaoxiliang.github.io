@@ -757,13 +757,20 @@
   <div class="media-body">
 
     <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/post/test/" >Test</a>
+      <a href="/post/test/" >Hugo &#43; Github pages 建立个人网页的方法</a>
     </div>
 
     
     <a href="/post/test/"  class="summary-link">
       <div class="article-style">
-        This is a simple post. Just for testing.
+        安装macports 安装过程中，会停止，按option-command+esc强制关闭。
+升级macports sudo port -v selfupdate 出错，修改~\opt\local\etc\macports\sources.conf
+将最后一句用#注释掉，
+rsync://rsync.macports.org/macports/release/tarballs/ports.tar [default] 并换成 https://distfiles.macports.org/ports.tar.gz [default]
+然后再运行 sudo port -v selfupdate可以升级
+安装Hugo 在Terminal安装Hugo，会提示安装go sudo port install hugo
+sudo port uninstall hugo
+安装好后，到https://github.com/gohugoio/hugo/releases下载hugo_extended_0.81.0_macOS-64bit.tar.gz14.2 MB
       </div>
     </a>
     
