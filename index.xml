@@ -42,9 +42,9 @@
 &lt;p&gt;升级macports
 sudo port -v selfupdate
 出错，修改~\opt\local\etc\macports\sources.conf&lt;/p&gt;
-&lt;p&gt;将最后一句用#注释掉，&lt;/p&gt;
-&lt;h1 id=&#34;rsyncrsyncmacportsorgmacportsreleasetarballsportstar-default&#34;&gt;rsync://rsync.macports.org/macports/release/tarballs/ports.tar [default]&lt;/h1&gt;
-&lt;p&gt;并换成
+&lt;p&gt;将最后一句用#注释掉，
+rsync://rsync.macports.org/macports/release/tarballs/ports.tar [default]
+并换成
 &lt;a href=&#34;https://distfiles.macports.org/ports.tar.gz&#34;&gt;https://distfiles.macports.org/ports.tar.gz&lt;/a&gt; [default]&lt;/p&gt;
 &lt;p&gt;然后再运行 sudo port -v selfupdate可以升级&lt;/p&gt;
 &lt;h2 id=&#34;安装hugo&#34;&gt;安装Hugo&lt;/h2&gt;
@@ -66,14 +66,18 @@ git commit -m &amp;ldquo;Build website&amp;rdquo;
 git push origin master
 cd ..&lt;/p&gt;
 &lt;h2 id=&#34;发布新文档方法&#34;&gt;发布新文档方法：&lt;/h2&gt;
-&lt;p&gt;打开Terminal
-进入myweb
-hugo new  &amp;ndash;kind post post/test #在myweb/content/post下会建立一个test文件夹，里面test.md可以修改会新的post&lt;/p&gt;
-&lt;p&gt;修改完后，运行hugo进行建站
-进入cd public
-git add .
-git commit -m &amp;ldquo;new&amp;rdquo;
-git push origin master&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;打开Terminal&lt;/li&gt;
+&lt;li&gt;进入myweb&lt;/li&gt;
+&lt;li&gt;hugo new  &amp;ndash;kind post post/test #在myweb/content/post下会建立一个test文件夹，里面test.md可以修改会新的post&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;修改完后，运行hugo进行建站&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进入cd public&lt;/li&gt;
+&lt;li&gt;git add .&lt;/li&gt;
+&lt;li&gt;git commit -m &amp;ldquo;new&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;git push origin master&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
