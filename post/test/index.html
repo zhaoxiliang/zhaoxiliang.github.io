@@ -825,7 +825,9 @@
   <div class="article-container">
 
     <div class="article-style">
-      <h2 id="安装macports">安装macports</h2>
+      <p>比较老的mac，系统MacOS10.13，无法安装Homebrew，使用Rstudio+blogdown，失败，后面使用macports安装成功，记录一下，安装过程主要参考：</p>
+<p><a href="https://leidawt.github.io/en/post/">https://leidawt.github.io/en/post/</a>借助hugo和academic主题在github/</p>
+<h2 id="安装macports">安装macports</h2>
 <p>安装过程中，会停止，按option-command+esc强制关闭。</p>
 <p>升级macports
 sudo port -v selfupdate
@@ -843,37 +845,21 @@ sudo port uninstall hugo</p>
 <p>安装好后，到https://github.com/gohugoio/hugo/releases下载hugo_extended_0.81.0_macOS-64bit.tar.gz14.2 MB</p>
 <p>解压后，将其中的hugo应用文件拷贝到\opt\local\bin里，进行替换，改成extended版本</p>
 <h2 id="运行hugo成功建站">运行hugo，成功建站</h2>
-<p>过程参考：
-<a href="https://leidawt.github.io/en/post/">https://leidawt.github.io/en/post/</a>借助hugo和academic主题在github/</p>
+<p>fork <a href="https://github.com/sourcethemes/academic-kickstart#fork-destination-box" target="_blank" rel="noopener">academic-kickstart</a>，然后clone到本地，执行</p>
+<p>git submodule update &ndash;init &ndash;recursive</p>
+<p>建立一个名字为&lt;你的github用户名&gt;.github.io的仓库（注：这是github page要求的形式），然后拉到本地：进入刚才的网站文件夹执行</p>
+<p>git submodule add -f -b master <a href="https://github.com/">https://github.com/</a>&lt;你的github用户名&gt;/&lt;你的github用户名&gt;.github.io.git public</p>
+<p>按wowchemy建立说明，进行相关设置</p>
+<p><a href="https://wowchemy.com/docs/getting-started/">https://wowchemy.com/docs/getting-started/</a></p>
+<p>运行hugo进行寻站，可运行hugo server在自己机器打开网站看效果
+进入到public文件夹，推送到远端，即主页端</p>
 <ul>
-<li>
-<p>git add .</p>
-</li>
-<li>
-<p>git commit -m &ldquo;Initial commit&rdquo;</p>
-</li>
-<li>
-<p>git push -u origin master</p>
-</li>
-<li>
-<p>hugo</p>
-</li>
-<li>
-<p>cd public</p>
-</li>
-<li>
-<p>git add .</p>
-</li>
-<li>
-<p>git commit -m &ldquo;Build website&rdquo;</p>
-</li>
-<li>
-<p>git push origin master</p>
-</li>
-<li>
-<p>cd ..</p>
-</li>
+<li>cd puclic</li>
+<li>git add .</li>
+<li>git commit -m &ldquo;update website&rdquo;</li>
+<li>git push origin master</li>
 </ul>
+<p>可以打开网页https://&lt;github用户名&gt;.github.io，应该可以看到网页效果了。</p>
 <h2 id="发布新文档方法">发布新文档方法：</h2>
 <ul>
 <li>打开Terminal</li>

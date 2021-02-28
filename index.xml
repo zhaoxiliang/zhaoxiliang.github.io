@@ -37,7 +37,9 @@
       <link>https://zhaoxiliang.github.io/post/test/</link>
       <pubDate>Sun, 28 Feb 2021 14:54:52 +0800</pubDate>
       <guid>https://zhaoxiliang.github.io/post/test/</guid>
-      <description>&lt;h2 id=&#34;安装macports&#34;&gt;安装macports&lt;/h2&gt;
+      <description>&lt;p&gt;比较老的mac，系统MacOS10.13，无法安装Homebrew，使用Rstudio+blogdown，失败，后面使用macports安装成功，记录一下，安装过程主要参考：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://leidawt.github.io/en/post/&#34;&gt;https://leidawt.github.io/en/post/&lt;/a&gt;借助hugo和academic主题在github/&lt;/p&gt;
+&lt;h2 id=&#34;安装macports&#34;&gt;安装macports&lt;/h2&gt;
 &lt;p&gt;安装过程中，会停止，按option-command+esc强制关闭。&lt;/p&gt;
 &lt;p&gt;升级macports
 sudo port -v selfupdate
@@ -55,37 +57,21 @@ sudo port uninstall hugo&lt;/p&gt;
 &lt;p&gt;安装好后，到https://github.com/gohugoio/hugo/releases下载hugo_extended_0.81.0_macOS-64bit.tar.gz14.2 MB&lt;/p&gt;
 &lt;p&gt;解压后，将其中的hugo应用文件拷贝到\opt\local\bin里，进行替换，改成extended版本&lt;/p&gt;
 &lt;h2 id=&#34;运行hugo成功建站&#34;&gt;运行hugo，成功建站&lt;/h2&gt;
-&lt;p&gt;过程参考：
-&lt;a href=&#34;https://leidawt.github.io/en/post/&#34;&gt;https://leidawt.github.io/en/post/&lt;/a&gt;借助hugo和academic主题在github/&lt;/p&gt;
+&lt;p&gt;fork &lt;a href=&#34;https://github.com/sourcethemes/academic-kickstart#fork-destination-box&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;academic-kickstart&lt;/a&gt;，然后clone到本地，执行&lt;/p&gt;
+&lt;p&gt;git submodule update &amp;ndash;init &amp;ndash;recursive&lt;/p&gt;
+&lt;p&gt;建立一个名字为&amp;lt;你的github用户名&amp;gt;.github.io的仓库（注：这是github page要求的形式），然后拉到本地：进入刚才的网站文件夹执行&lt;/p&gt;
+&lt;p&gt;git submodule add -f -b master &lt;a href=&#34;https://github.com/&#34;&gt;https://github.com/&lt;/a&gt;&amp;lt;你的github用户名&amp;gt;/&amp;lt;你的github用户名&amp;gt;.github.io.git public&lt;/p&gt;
+&lt;p&gt;按wowchemy建立说明，进行相关设置&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/getting-started/&#34;&gt;https://wowchemy.com/docs/getting-started/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;运行hugo进行寻站，可运行hugo server在自己机器打开网站看效果
+进入到public文件夹，推送到远端，即主页端&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;git add .&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;git commit -m &amp;ldquo;Initial commit&amp;rdquo;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;git push -u origin master&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;hugo&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;cd public&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;git add .&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;git commit -m &amp;ldquo;Build website&amp;rdquo;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;git push origin master&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;cd ..&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;cd puclic&lt;/li&gt;
+&lt;li&gt;git add .&lt;/li&gt;
+&lt;li&gt;git commit -m &amp;ldquo;update website&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;git push origin master&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;可以打开网页https://&amp;lt;github用户名&amp;gt;.github.io，应该可以看到网页效果了。&lt;/p&gt;
 &lt;h2 id=&#34;发布新文档方法&#34;&gt;发布新文档方法：&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;打开Terminal&lt;/li&gt;
