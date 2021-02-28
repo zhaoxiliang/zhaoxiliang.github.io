@@ -37,9 +37,9 @@
 升级macports sudo port -v selfupdate 出错，修改~\opt\local\etc\macports\sources.conf
 将最后一句用#注释掉， rsync://rsync.macports.org/macports/release/tarballs/ports.tar [default] 并换成 https://distfiles.macports.org/ports.tar.gz [default]
 然后再运行 sudo port -v selfupdate可以升级
-安装Hugo 在Terminal安装Hugo，会提示安装go sudo port install hugo
-sudo port uninstall hugo
-安装好后，到https://github.com/gohugoio/hugo/releases下载hugo_extended_0.81.0_macOS-64bit.tar.gz14.2 MB" />
+安装Hugo 在Terminal安装Hugo，会提示安装go
+sudo port install hugo
+想缷载可以使用： sudo port uninstall hugo" />
 
   
   <link rel="alternate" hreflang="en-us" href="https://zhaoxiliang.github.io/post/test/" />
@@ -312,9 +312,9 @@ sudo port uninstall hugo
 升级macports sudo port -v selfupdate 出错，修改~\opt\local\etc\macports\sources.conf
 将最后一句用#注释掉， rsync://rsync.macports.org/macports/release/tarballs/ports.tar [default] 并换成 https://distfiles.macports.org/ports.tar.gz [default]
 然后再运行 sudo port -v selfupdate可以升级
-安装Hugo 在Terminal安装Hugo，会提示安装go sudo port install hugo
-sudo port uninstall hugo
-安装好后，到https://github.com/gohugoio/hugo/releases下载hugo_extended_0.81.0_macOS-64bit.tar.gz14.2 MB" /><meta property="og:image" content="https://zhaoxiliang.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
+安装Hugo 在Terminal安装Hugo，会提示安装go
+sudo port install hugo
+想缷载可以使用： sudo port uninstall hugo" /><meta property="og:image" content="https://zhaoxiliang.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
     <meta property="twitter:image" content="https://zhaoxiliang.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -367,7 +367,7 @@ sudo port uninstall hugo
       "url": "https://zhaoxiliang.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "安装macports 安装过程中，会停止，按option-command+esc强制关闭。\n升级macports sudo port -v selfupdate 出错，修改~\\opt\\local\\etc\\macports\\sources.conf\n将最后一句用#注释掉， rsync://rsync.macports.org/macports/release/tarballs/ports.tar [default] 并换成 https://distfiles.macports.org/ports.tar.gz [default]\n然后再运行 sudo port -v selfupdate可以升级\n安装Hugo 在Terminal安装Hugo，会提示安装go sudo port install hugo\nsudo port uninstall hugo\n安装好后，到https://github.com/gohugoio/hugo/releases下载hugo_extended_0.81.0_macOS-64bit.tar.gz14.2 MB"
+  "description": "安装macports 安装过程中，会停止，按option-command+esc强制关闭。\n升级macports sudo port -v selfupdate 出错，修改~\\opt\\local\\etc\\macports\\sources.conf\n将最后一句用#注释掉， rsync://rsync.macports.org/macports/release/tarballs/ports.tar [default] 并换成 https://distfiles.macports.org/ports.tar.gz [default]\n然后再运行 sudo port -v selfupdate可以升级\n安装Hugo 在Terminal安装Hugo，会提示安装go\nsudo port install hugo\n想缷载可以使用： sudo port uninstall hugo"
 }
 </script>
 
@@ -848,23 +848,44 @@ rsync://rsync.macports.org/macports/release/tarballs/ports.tar [default]
 <a href="https://distfiles.macports.org/ports.tar.gz">https://distfiles.macports.org/ports.tar.gz</a> [default]</p>
 <p>然后再运行 sudo port -v selfupdate可以升级</p>
 <h2 id="安装hugo">安装Hugo</h2>
-<p>在Terminal安装Hugo，会提示安装go
-sudo port install hugo</p>
-<p>sudo port uninstall hugo</p>
+<p>在Terminal安装Hugo，会提示安装go</p>
+<p>sudo port install hugo</p>
+<p>想缷载可以使用：
+sudo port uninstall hugo</p>
 <p>安装好后，到https://github.com/gohugoio/hugo/releases下载hugo_extended_0.81.0_macOS-64bit.tar.gz14.2 MB</p>
 <p>解压后，将其中的hugo应用文件拷贝到\opt\local\bin里，进行替换，改成extended版本</p>
 <h2 id="运行hugo成功建站">运行hugo，成功建站</h2>
 <p>过程参考：
 <a href="https://leidawt.github.io/en/post/">https://leidawt.github.io/en/post/</a>借助hugo和academic主题在github/</p>
-<p>git add .
-git commit -m &ldquo;Initial commit&rdquo;
-git push -u origin master</p>
-<p>hugo
-cd public
-git add .
-git commit -m &ldquo;Build website&rdquo;
-git push origin master
-cd ..</p>
+<ul>
+<li>
+<p>git add .</p>
+</li>
+<li>
+<p>git commit -m &ldquo;Initial commit&rdquo;</p>
+</li>
+<li>
+<p>git push -u origin master</p>
+</li>
+<li>
+<p>hugo</p>
+</li>
+<li>
+<p>cd public</p>
+</li>
+<li>
+<p>git add .</p>
+</li>
+<li>
+<p>git commit -m &ldquo;Build website&rdquo;</p>
+</li>
+<li>
+<p>git push origin master</p>
+</li>
+<li>
+<p>cd ..</p>
+</li>
+</ul>
 <h2 id="发布新文档方法">发布新文档方法：</h2>
 <ul>
 <li>打开Terminal</li>

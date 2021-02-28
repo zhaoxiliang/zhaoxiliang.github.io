@@ -48,23 +48,44 @@ rsync://rsync.macports.org/macports/release/tarballs/ports.tar [default]
 &lt;a href=&#34;https://distfiles.macports.org/ports.tar.gz&#34;&gt;https://distfiles.macports.org/ports.tar.gz&lt;/a&gt; [default]&lt;/p&gt;
 &lt;p&gt;然后再运行 sudo port -v selfupdate可以升级&lt;/p&gt;
 &lt;h2 id=&#34;安装hugo&#34;&gt;安装Hugo&lt;/h2&gt;
-&lt;p&gt;在Terminal安装Hugo，会提示安装go
-sudo port install hugo&lt;/p&gt;
-&lt;p&gt;sudo port uninstall hugo&lt;/p&gt;
+&lt;p&gt;在Terminal安装Hugo，会提示安装go&lt;/p&gt;
+&lt;p&gt;sudo port install hugo&lt;/p&gt;
+&lt;p&gt;想缷载可以使用：
+sudo port uninstall hugo&lt;/p&gt;
 &lt;p&gt;安装好后，到https://github.com/gohugoio/hugo/releases下载hugo_extended_0.81.0_macOS-64bit.tar.gz14.2 MB&lt;/p&gt;
 &lt;p&gt;解压后，将其中的hugo应用文件拷贝到\opt\local\bin里，进行替换，改成extended版本&lt;/p&gt;
 &lt;h2 id=&#34;运行hugo成功建站&#34;&gt;运行hugo，成功建站&lt;/h2&gt;
 &lt;p&gt;过程参考：
 &lt;a href=&#34;https://leidawt.github.io/en/post/&#34;&gt;https://leidawt.github.io/en/post/&lt;/a&gt;借助hugo和academic主题在github/&lt;/p&gt;
-&lt;p&gt;git add .
-git commit -m &amp;ldquo;Initial commit&amp;rdquo;
-git push -u origin master&lt;/p&gt;
-&lt;p&gt;hugo
-cd public
-git add .
-git commit -m &amp;ldquo;Build website&amp;rdquo;
-git push origin master
-cd ..&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;git add .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;git commit -m &amp;ldquo;Initial commit&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;git push -u origin master&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;hugo&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cd public&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;git add .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;git commit -m &amp;ldquo;Build website&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;git push origin master&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cd ..&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;发布新文档方法&#34;&gt;发布新文档方法：&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;打开Terminal&lt;/li&gt;
